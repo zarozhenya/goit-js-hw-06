@@ -25,9 +25,7 @@ const createBoxes = (amount) => {
   let size = 30;
   for (let i = 0; i < amount; i += 1) {
     const currentColor = getRandomHexColor();
-    console.log(currentColor);
     boxes.push(createBox({ boxSize: size, color: currentColor }));
-    console.log(boxes[i]);
     size += 10;
   }
   refs.boxesContainer.append(...boxes);
@@ -38,8 +36,6 @@ const destroyBoxes = () => {
 };
 
 refs.createButton.addEventListener("click", () => {
-  console.log("click");
-  console.log(refs.input.value);
   createBoxes(Number.parseInt(refs.input.value));
   refs.input.value = "";
 });
