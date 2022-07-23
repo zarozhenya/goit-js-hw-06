@@ -3,7 +3,6 @@ const refs = {
   output: document.querySelector("#text"),
 };
 refs.output.style.fontSize = refs.input.value + "px";
-console.log(refs.output.style);
 refs.input.addEventListener("input", (event) => {
   refs.output.style.fontSize = event.currentTarget.value + "px";
 });
